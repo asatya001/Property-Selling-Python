@@ -1,8 +1,11 @@
 from django.db import models
 from .conf import SpecificationChoices, PropertyTypeChoices
 
-# Create your models here.
+
 class Property(models.Model):
+    '''
+    Model for properties
+    '''
     description = models.CharField(max_length=50)
     photos = models.ImageField(upload_to='images', null=True, blank=True)
     cost = models.FloatField()
